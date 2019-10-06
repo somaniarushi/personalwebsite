@@ -12,10 +12,10 @@
         height = window.innerHeight;
         target = {x: width/2, y: height/2};
 
-        largeHeader = document.getElementById('home_banner_area');
+        largeHeader = document.getElementById('welcome_text');
         largeHeader.style.height = height+'px';
 
-        canvas = document.getElementById('demo');
+        canvas = document.getElementById('demo2');
         canvas.width = width;
         canvas.height = height;
         ctx = canvas.getContext('2d');
@@ -63,7 +63,7 @@
 
         // assign a circle to each point
         for(var i in points) {
-            var c = new Circle(points[i], 2+Math.random()*8, 'rgba(195,195,195,0.3)');
+            var c = new Circle(points[i], 2+Math.random()*5, 'rgba(255,255,255,0.3)');
             points[i].circle = c;
         }
     }
@@ -112,15 +112,15 @@
         }
     }
 
-     function animate() {
+    function animate() {
         if(animateHeader) {
             ctx.clearRect(0,0,width,height);
             for(var i in points) {
                 // detect points in range
-                if(Math.abs(getDistance(target, points[i])) < 4000) {
+                if(Math.abs(getDistance(target, points[i])) < 9000) {
                     points[i].active = 0.3;
                     points[i].circle.active = 0.6;
-                } else if(Math.abs(getDistance(target, points[i])) < 20000) {
+                } else if(Math.abs(getDistance(target, points[i])) < 25000) {
                     points[i].active = 0.1;
                     points[i].circle.active = 0.3;
                 } else if(Math.abs(getDistance(target, points[i])) < 40000) {
@@ -146,7 +146,6 @@
             }});
     }
 
-
     // Canvas manipulation
     function drawLines(p) {
         if(!p.active) return;
@@ -154,7 +153,8 @@
             ctx.beginPath();
             ctx.moveTo(p.x, p.y);
             ctx.lineTo(p.closest[i].x, p.closest[i].y);
-            ctx.strokeStyle = 'rgba(195, 195, 195, '+ p.active+')';
+            ctx.lineWidth= 400;
+            ctx.strokeStyle = 'rgba(229, 229, 255, '+ p.active+')';
             ctx.stroke();
         }
     }
@@ -172,8 +172,8 @@
         this.draw = function() {
             if(!_this.active) return;
             ctx.beginPath();
-            ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 7* Math.PI, false);
-            ctx.fillStyle = 'rgba(195, 195, 195,'+ _this.active+')';
+            ctx.arc(_this.pos.x, _this.pos.y, _this.radius, 0, 2 * Math.PI, false);
+            ctx.fillStyle = 'rgba(229, 229, 255,'+ _this.active+')';
             ctx.fill();
         };
     }
