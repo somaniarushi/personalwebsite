@@ -280,10 +280,14 @@ button:focus {
       padding-bottom: 140px;
       overflow:hidden;
     }
+      .home_banner_area .banner_inner .home_left_img .image_card img{
+            opacity: 10%;
+          }
     .home_banner_area .banner_inner .col-lg-6 {
       vertical-align: middle;
       align-self: center; }
     .home_banner_area .banner_inner .banner_content {
+      padding-top: 100px;
       text-align: left;
       color: #000000;
     }
