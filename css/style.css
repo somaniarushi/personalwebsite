@@ -274,29 +274,26 @@ button:focus {
     height: 100%;
     width: 100%;
      -webkit-transform: translate3d(-150%,-150%,0);
-  transform: translate3d(0%,-105%,0);
+  transform: translate3d(0%,-65%,0);
+   padding-top: 50px;
+      vertical-align: middle;
+      align-self: center; 
+      text-align: left;
+    color: #000000
   }
-    .home_banner_area .banner_inner .home_left_img {
-      padding-top: 150px;
+    /*.home_banner_area .banner_inner .home_left_img {
+      padding-top: 75px;
       padding-bottom: 140px;
       overflow:hidden;
-    }
-    .home_banner_area .banner_inner .col-lg-6 {
-      padding-top: 100px;
-      vertical-align: middle;
-      align-self: center; }
-    .home_banner_area .banner_inner .banner_content {
-      padding-top: 100px;
-      text-align: left;
-      color: #000000;
-    }
-      .home_banner_area .banner_inner .banner_content h4 {
+    }*/
+      .home_banner_area .banner_inner h4 {
         font-size: 20px;
+        color: #ffffff;
         font-family: "Generica", sans-serif;
         text-transform: uppercase;
         letter-spacing: 2.1px;
         margin-bottom: 25px; }
-      .home_banner_area .banner_inner .banner_content h2 {
+      .home_banner_area .banner_inner h2 {
         margin-top: 0px;
         font-size: 60px;
         font-weight: bold;
@@ -309,7 +306,7 @@ button:focus {
         text-shadow: 3px 2px 10px #C0C0C0;
         }
 
-      .home_banner_area .banner_inner .banner_content p {
+      .home_banner_area .banner_inner p {
         color: #000000;
         font-family: "Avenir", sans-serif;
         font-weight: lighter;
@@ -319,7 +316,7 @@ button:focus {
         line-height: 26px;
         letter-spacing: 0.5px;
         margin: 0px auto 45px; }
-      .home_banner_area .banner_inner .banner_content .banner_map_img {
+      .home_banner_area .banner_inner .banner_map_img {
         text-align: right;
       }
 
