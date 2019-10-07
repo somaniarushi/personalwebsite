@@ -282,6 +282,7 @@ button:focus {
       overflow:hidden;
     }
     .home_banner_area .banner_inner .col-lg-6 {
+      padding-top: 100px;
       vertical-align: middle;
       align-self: center; }
     .home_banner_area .banner_inner .banner_content {
